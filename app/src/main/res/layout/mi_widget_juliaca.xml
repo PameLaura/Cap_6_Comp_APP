@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="8dp"
+    android:background="#2196F3">
+
+    <TextView
+        android:id="@+id/appwidget_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="UNAJ - Ingeniería"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/widget_actualizado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Actualizado --:--"
+        android:textColor="#E3F2FD"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/widget_abrir_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Abrir app"
+        android:textAllCaps="false" />
+</LinearLayout>

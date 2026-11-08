@@ -1,47 +1,21 @@
 package com.example.comp_app_cap_6
 
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.comp_app_cap_6.ui.theme.Comp_APP_Cap6Theme
+import android.util.Log
+import androidx.fragment.app.FragmentActivity
 
-class MainActivity : ComponentActivity() {
+open class MainActivity : FragmentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContent {
-            Comp_APP_Cap6Theme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
-        }
+        Log.d("LifecycleDebug", "onCreate")
+        setContentView(R.layout.activity_main)
+        if (savedInstanceState == null) supportFragmentManager.beginTransaction()
+            .replace(R.id.fragmentContainer, FirstFragment()).commit()
     }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    Comp_APP_Cap6Theme {
-        Greeting("Android")
-    }
+    override fun onStart() { super.onStart(); Log.d("LifecycleDebug", "onStart") }
+    override fun onResume() { super.onResume(); Log.d("LifecycleDebug", "onResume") }
+    override fun onPause() { Log.d("LifecycleDebug", "onPause"); super.onPause() }
+    override fun onStop() { Log.d("LifecycleDebug", "onStop"); super.onStop() }
+    override fun onRestart() { super.onRestart(); Log.d("LifecycleDebug", "onRestart") }
+    override fun onDestroy() { Log.d("LifecycleDebug", "onDestroy"); super.onDestroy() }
 }

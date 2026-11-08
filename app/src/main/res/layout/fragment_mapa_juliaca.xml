@@ -1,0 +1,13 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="#F2F5FA">
+<TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" android:text="Capítulo 6 · Juliaca" android:textSize="22sp" android:textStyle="bold" android:textColor="#16324F" />
+<org.osmdroid.views.MapView android:id="@+id/mapOsm" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:minHeight="160dp" />
+<TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="6dp" android:text="© OpenStreetMap contributors · El mapa necesita Internet" android:textSize="12sp" />
+<ScrollView android:layout_width="match_parent" android:layout_height="240dp" android:fillViewport="true">
+<LinearLayout android:id="@+id/controls" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="12dp">
+<Button android:id="@+id/btnPlay" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Reproducir música" />
+<Button android:id="@+id/btnStop" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Detener música" />
+<Button android:id="@+id/btnExplicitIntent" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Ver Detalles (Explícito)" />
+<Button android:id="@+id/btnImplicitIntent" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Abrir GPS (Implícito)" />
+<Button android:id="@+id/btnMediaStore" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Ver Última Foto (MediaStore)" />
+<Button android:id="@+id/btnAnimacion" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Abrir con Animación" />
+</LinearLayout></ScrollView></LinearLayout>
